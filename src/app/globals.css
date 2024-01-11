@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(81, 28, 71,0.45) rgb(85, 30, 69,0.90);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-button,
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 30, 69,0.90);
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(85, 30, 69,0.90);
+}
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'Mulish', sans-serif;
+
+
+}
+
+body{
+  @apply text-slate-700
+}
+ 
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  animation: borderGrow 0.5s forwards;
+}
+
+
+@keyframes borderGrow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+  .container {
+    @apply mx-auto px-3 max-w-full md:w-[992px] lg:w-[1152px]
+  }
+  
+  .heroBg{
+
+    background-image: linear-gradient(
+      rgb(81, 28, 71,0.45),
+      rgb(85, 30, 69,0.90)
+    ), url("../assets/home/Banner/banner-6.jpg");
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+height: 80vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 92%, 50% 100%, 0 92%);
+    background-repeat: no-repeat;
+  }
+  
+  .bgClipPath{
+    clip-path: polygon(0 0, 100% 0%, 100% 92%, 50% 100%, 0 92%);
+
+  }
+
+
+
+
+  .courseBg{
+
+    background-image: linear-gradient(
+      rgba(46, 31, 43, 0.664),
+      rgba(73, 32, 61, 0.9)
+    ), url("../assets/courses/courseBanner.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+
+  @media (min-width: 768px){
+    .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+
+      margin-right: 0 !important;
+      margin-left: 0 !important; 
+   
+  }
+  
+  }  
+
+  @media only screen and (max-width: 600px){
+    .heroBg{
+      height: 50vh;
+      background-size: cover;
+    }
+  }
+
+
+  .scale-up-animation {
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .no-scroll-bg {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+input[type="number"].no-increment::-webkit-inner-spin-button,
+input[type="number"].no-increment::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+input[type="number"].no-increment {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.modal-scroll-bar::-webkit-scrollbar {
+  width: 0.5em;
+}
+.modal-scroll-bar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.modal-scroll-bar::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 30, 69,0.90);
+  outline: 1px solid rgb(81, 28, 71,0.45),;
+}
+.modal-scroll-bar {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0);
+}
+
+
+
